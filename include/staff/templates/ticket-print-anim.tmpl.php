@@ -126,9 +126,10 @@ foreach (DynamicFormEntry::forTicket($ticket->getId()) as $form) {
     )));
     if (count($answers) == 0)
         continue;
+    if ($form->getTitle() == 'Divers & infos complémentaires' && count($answers) == 1 && $answers[0]->getField()->get('label') == 'Autres' && empty($answers[0]->display())) continue;
     ?>
         <table class="custom-data" cellspacing="0" cellpadding="4" width="100%" border="0">
-        <tr><td colspan="2" class="headline flush-left"><?php echo $form->getTitle(); ?></th></tr>
+        <tr><td colspan="2" class="headline flush-left"><?php echo $form->getTitle() ?></th></tr>
         <?php foreach($answers as $a) {
             if (!($v = $a->display())) continue; ?>
             <tr>
