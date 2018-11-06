@@ -84,6 +84,8 @@ if($ticket->isOverdue())
                  class="icon-file-alt"></i> <?php echo __('Ticket Thread'); ?></a>
                  <li><a class="no-pjax" target="_blank" href="tickets.php?id=<?php echo $ticket->getId(); ?>&a=print&notes=1"><i
                  class="icon-file-text-alt"></i> <?php echo __('Thread + Internal Notes'); ?></a>
+                  <li><a class="no-pjax" target="_blank" href="tickets.php?id=<?php echo $ticket->getId(); ?>&a=print&notes=0&psize=A4&template=anim"><i
+                                  class="icon-file-text-alt"></i> <?php echo __('Fiche anim'); ?></a>
               </ul>
             </div>
             <?php
