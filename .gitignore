@@ -18,3 +18,5 @@ stage
 include/mpdf/ttfontdata
 include/mpdf/tmp
 nbproject/
+
+.idea/
