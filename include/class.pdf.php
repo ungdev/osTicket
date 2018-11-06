@@ -60,11 +60,14 @@ class Ticket2PDF extends mPDFWithLocalImages
 
     var $ticket = null;
 
-	function __construct($ticket, $psize='Letter', $notes=false) {
+    var $template;
+
+	function __construct($ticket, $psize='Letter', $notes=false, $template='default') {
         global $thisstaff;
 
         $this->ticket = $ticket;
         $this->includenotes = $notes;
+        $this->template = $template;
 
         parent::__construct('', $psize);
 
@@ -83,7 +86,13 @@ class Ticket2PDF extends mPDFWithLocalImages
 
         ob_start();
         if ($thisstaff)
-            include STAFFINC_DIR.'templates/ticket-print.tmpl.php';
+            switch($this->template) {
+                case 'anim':
+                    include STAFFINC_DIR.'templates/ticket-print-anim.tmpl.php';
+                    break;
+                default:
+                    include STAFFINC_DIR.'templates/ticket-print.tmpl.php';
+            }
         elseif ($thisclient)
             include CLIENTINC_DIR.'templates/ticket-print.tmpl.php';
         else

@@ -512,7 +512,7 @@ if($ticket) {
             $f->filterFields(function($f) { return !$f->isStorable(); });
             $f->addMissingFields();
         }
-    } elseif($_REQUEST['a'] == 'print' && !$ticket->pdfExport($_REQUEST['psize'], $_REQUEST['notes']))
+    } elseif($_REQUEST['a'] == 'print' && !$ticket->pdfExport($_REQUEST['psize'], $_REQUEST['notes'], $_REQUEST['template']))
         $errors['err'] = __('Unable to export the ticket to PDF for print.')
             .' '.__('Internal error occurred');
 } else {
