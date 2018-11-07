@@ -16,23 +16,18 @@
 
         #sgns {
             width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin-top: 40px;
+            margin: 40px;
+            border: none;
         }
 
-        .sgnBlock {
-            display: flex;
-            flex-direction: column;
-            width: 40%;
+        .sgnCol {
+            width: 45%;
             font-style: italic;
             font-weight: bold;
             text-align: center;
         }
 
         .sgn {
-            width: 100%;
             height: 80px;
             margin-top: 20px;
             border: 3px solid black;
@@ -206,16 +201,18 @@ foreach (DynamicFormEntry::forTicket($ticket->getId()) as $form) {
     $idx++;
 } ?>
 
-<div id="sgns">
-    <div class="sgnBlock">
-        <div>Signature BDE</div>
-        <div class="sgn"></div>
-    </div>
-    <div class="sgnBlock">
-        <div>Signature administration</div>
-        <div class="sgn"></div>
-    </div>
-</div>
+<table id="sgns">
+    <tr>
+        <th class="sgnCol">Signature BDE</th>
+        <th></th>
+        <th class="sgnCol">Signature administration</th>
+    </tr>
+    <tr>
+        <td class="sgn"></td>
+        <td></td>
+        <td class="sgn"></td>
+    </tr>
+</table>
 
 </body>
 </html>
