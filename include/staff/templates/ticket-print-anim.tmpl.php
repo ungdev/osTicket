@@ -5,9 +5,9 @@
 @page {
     header: html_def;
     footer: html_def;
-    margin: 15mm;
-    margin-top: 10mm;
-    margin-bottom: 22mm;
+    margin: 8mm;
+    /*margin-top: 10mm;
+    margin-bottom: 22mm;*/
 }
 h1 {
     text-align: center;
