@@ -81,10 +81,15 @@
 
         table.custom-data {
             margin-top: 10px;
+            border-bottom: 2px solid black;
         }
 
         table.custom-data th {
             width: 25%;
+        }
+
+        .custom-data-row td, .custom-data-row th {
+            border-bottom: 1px solid #5d5d5d;
         }
 
         table.custom-data th,
@@ -186,7 +191,7 @@ foreach (DynamicFormEntry::forTicket($ticket->getId()) as $form) {
             if (!($v = $a->display())) continue;
             if ($form->getTitle() == 'Informations sur le demandeur et l\'évènement' && $a->getField()->get('label') == 'N° de téléphone du demandeur') continue;
             ?>
-            <tr>
+            <tr class="custom-data-row">
                 <th><?php
                     echo $a->getField()->get('label');
                     ?>:
