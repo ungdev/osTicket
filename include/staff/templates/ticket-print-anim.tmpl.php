@@ -140,7 +140,9 @@ foreach (DynamicFormEntry::forTicket($ticket->getId()) as $form) {
         <table class="custom-data" cellspacing="0" cellpadding="4" width="100%" border="0">
         <tr><td colspan="2" class="headline flush-left"><?php echo $form->getTitle() ?></th></tr>
         <?php foreach($answers as $a) {
-            if (!($v = $a->display())) continue; ?>
+            if (!($v = $a->display())) continue;
+            if ($form->getTitle() == 'Informations sur le demandeur et l\'évènement' && $a->getField()->get('label') == 'N° de téléphone du demandeur') continue;
+            ?>
             <tr>
                 <th><?php
     echo $a->getField()->get('label');
