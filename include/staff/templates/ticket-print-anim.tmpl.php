@@ -102,7 +102,7 @@ div.hr {
 </head>
 <body>
 
-<htmlpagefooter name="def" style="display:none">
+<!--<htmlpagefooter name="def" style="display:none">
     <div class="hr">&nbsp;</div>
     <table width="100%"><tr><td class="flush-left">
         Fiche animation n°<?php echo $ticket->getNumber(); ?>
@@ -111,7 +111,7 @@ div.hr {
         Page {PAGENO}
     </td>
     </tr></table>
-</htmlpagefooter>
+</htmlpagefooter>-->
 
 <!-- Ticket metadata -->
 <h1>BDE UTT - Fiche animation</h1>
