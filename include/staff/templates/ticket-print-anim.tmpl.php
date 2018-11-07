@@ -105,7 +105,7 @@ div.hr {
 <htmlpagefooter name="def" style="display:none">
     <div class="hr">&nbsp;</div>
     <table width="100%"><tr><td class="flush-left">
-        Fiche animation n° #<?php echo $ticket->getNumber(); ?>
+        Fiche animation n°<?php echo $ticket->getNumber(); ?>
     </td>
     <td class="flush-right">
         Page {PAGENO}
